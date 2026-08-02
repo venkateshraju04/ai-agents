@@ -1,6 +1,6 @@
 from graph import graph
 initial_state = {
-    "query": "who invented python?",
+    "query": "18*33",
     "answer": ""
 }
 
