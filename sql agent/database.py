@@ -1,7 +1,7 @@
 import sqlite3
 from pathlib import Path
 
-DB_PATH = Path("data/ecommerce.db")
+DB_PATH = Path(__file__).parent / "data" / "ecommerce.db"
 
 
 def get_connection():
