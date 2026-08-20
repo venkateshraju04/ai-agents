@@ -93,6 +93,10 @@ if uploaded_file is not None:
             
             with st.expander("💻 View Generated Python Code"):
                 st.code(final_state["generated_code"], language="python")
+                
+            # Clean up the temporary dataset file so it doesn't clutter the directory
+            if os.path.exists(dataset_path):
+                os.remove(dataset_path)
 
     elif not analyze_btn:
         st.info("Dataset loaded! Enter a query in the sidebar and click 'Run Analysis'.")
